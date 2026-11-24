@@ -1,0 +1,118 @@
+export const travelData = [
+  {
+    id: 'c1',
+    cityName: '成都市',
+    provinceName: '四川省',
+    coordinates: [104.06, 30.67],
+    visitDate: '2025-10-01',
+    cost: 2500,
+    transport: '飞机',
+    days: 4,
+    tags: ['美食', '慢节奏', '人文'],
+    photos: [
+      {
+        id: 'p1',
+        url: 'https://images.unsplash.com/photo-1571677246347-5040036b95cc?auto=format&fit=crop&w=900&q=80',
+        note: '在宽窄巷子吃冰粉',
+        story: '那天天气很热，但冰粉特别甜。',
+      },
+    ],
+  },
+  {
+    id: 'c2',
+    cityName: '杭州市',
+    provinceName: '浙江省',
+    coordinates: [120.16, 30.27],
+    visitDate: '2025-05-18',
+    cost: 2100,
+    transport: '高铁',
+    days: 3,
+    tags: ['慢节奏', '湖景', '人文'],
+    photos: [
+      {
+        id: 'p2',
+        url: 'https://images.unsplash.com/photo-1568021581068-dbd1d7b7f883?auto=format&fit=crop&w=900&q=80',
+        note: '雨后的西湖边散步',
+        story: '荷叶上还挂着水珠，湖面安静得像一幅画。',
+      },
+    ],
+  },
+  {
+    id: 'c3',
+    cityName: '厦门市',
+    provinceName: '福建省',
+    coordinates: [118.09, 24.48],
+    visitDate: '2025-07-09',
+    cost: 3200,
+    transport: '飞机',
+    days: 5,
+    tags: ['海滨', '慢节奏', '美食'],
+    photos: [
+      {
+        id: 'p3',
+        url: 'https://images.unsplash.com/photo-1563555638109-915d7c1d7f84?auto=format&fit=crop&w=900&q=80',
+        note: '鼓浪屿的转角花墙',
+        story: '海风吹过小巷，咖啡香和花香混在一起。',
+      },
+    ],
+  },
+  {
+    id: 'c4',
+    cityName: '大理市',
+    provinceName: '云南省',
+    coordinates: [100.23, 25.59],
+    visitDate: '2025-03-22',
+    cost: 2800,
+    transport: '飞机',
+    days: 4,
+    tags: ['自然', '慢节奏', '人文'],
+    photos: [
+      {
+        id: 'p4',
+        url: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
+        note: '洱海边等日落',
+        story: '云层一点点被染成粉色，风很轻。',
+      },
+    ],
+  },
+  {
+    id: 'c5',
+    cityName: '西安市',
+    provinceName: '陕西省',
+    coordinates: [108.94, 34.34],
+    visitDate: '2024-11-06',
+    cost: 1900,
+    transport: '高铁',
+    days: 3,
+    tags: ['历史', '美食', '人文'],
+    photos: [
+      {
+        id: 'p5',
+        url: 'https://images.unsplash.com/photo-1539580348648-6d1b1c9c4c3b?auto=format&fit=crop&w=900&q=80',
+        note: '城墙上骑单车',
+        story: '黄昏时的风带着一点凉意，远处的灯慢慢亮起来。',
+      },
+    ],
+  },
+  {
+    id: 'c6',
+    cityName: '哈尔滨市',
+    provinceName: '黑龙江省',
+    coordinates: [126.53, 45.8],
+    visitDate: '2024-01-14',
+    cost: 3600,
+    transport: '飞机',
+    days: 4,
+    tags: ['冰雪', '城市漫游', '美食'],
+    photos: [
+      {
+        id: 'p6',
+        url: 'https://images.unsplash.com/photo-1517299321609-52687d1bc55a?auto=format&fit=crop&w=900&q=80',
+        note: '松花江边看雾凇',
+        story: '江面升起的白雾让整座城市都变得柔软。',
+      },
+    ],
+  },
+]
+
+export default travelData

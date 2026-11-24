@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=ZCOOL+KuaiLe&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: #f9f9f4;
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100dvh;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    font: inherit;
+  }
+}
+
+.photo-wall-surface {
+  background: rgba(125, 187, 108, 0.32);
+  backdrop-filter: blur(22px) saturate(118%);
+  -webkit-backdrop-filter: blur(22px) saturate(118%);
+  isolation: isolate;
+}
+
+.photo-wall-surface::before,
+.photo-wall-surface::after {
+  content: '';
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.photo-wall-surface::before {
+  background-image:
+    repeating-radial-gradient(
+      ellipse 120% 62% at 8% 4%,
+      transparent 0 34px,
+      rgba(255, 255, 255, 0.3) 36px 37px,
+      transparent 39px 66px
+    ),
+    repeating-radial-gradient(
+      ellipse 100% 55% at 92% 96%,
+      transparent 0 48px,
+      rgba(255, 255, 255, 0.22) 50px 51px,
+      transparent 53px 84px
+    );
+  opacity: 0.72;
+}
+
+.photo-wall-surface::after {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.18), transparent 42%, rgba(131, 199, 214, 0.16));
+  mix-blend-mode: soft-light;
+  opacity: 0.7;
+}
+
+.polaroid-card {
+  transform-origin: center 55%;
+  will-change: filter, transform;
+}
+
+.postcard {
+  will-change: box-shadow, transform;
+}
+
+.timeline-river {
+  background: linear-gradient(
+    to bottom,
+    rgba(125, 187, 108, 0.2),
+    rgba(131, 199, 214, 0.88) 30%,
+    rgba(125, 187, 108, 0.78) 66%,
+    rgba(125, 187, 108, 0.18)
+  );
+  background-size: 100% 220%;
+  box-shadow: 0 0 14px rgba(131, 199, 214, 0.32);
+  animation: timeline-flow 7s ease-in-out infinite alternate;
+}
+
+.achievement-seal {
+  border: 3px double rgba(255, 255, 255, 0.82);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 29%, rgba(255, 255, 255, 0.38) 0 5%, transparent 6%),
+    radial-gradient(circle, #e7b866 0 35%, #c99047 36% 61%, #a96236 62% 100%);
+  box-shadow:
+    inset 0 0 0 3px rgba(108, 63, 38, 0.2),
+    0 5px 11px rgba(91, 66, 35, 0.2);
+  text-shadow: 0 1px 0 rgba(83, 56, 34, 0.4);
+}
+
+.achievement-seal--locked {
+  background: transparent;
+  border: 2px solid currentColor;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.travel-poster {
+  background-color: #f9f9f4;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(44, 62, 46, 0.024) 0 1px, transparent 1px 9px),
+    repeating-linear-gradient(90deg, rgba(131, 199, 214, 0.035) 0 1px, transparent 1px 13px),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(236, 242, 227, 0.56));
+  color: #2c3e2e;
+  height: 1440px;
+  overflow: hidden;
+  position: relative;
+  width: 1080px;
+}
+
+.travel-poster::before {
+  border: 1px solid rgba(125, 187, 108, 0.3);
+  content: '';
+  inset: 28px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.poster-map-frame {
+  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid rgba(125, 187, 108, 0.22);
+  box-shadow: 0 14px 32px rgba(44, 62, 46, 0.08);
+}
+
+.poster-polaroid {
+  background: #fff;
+  box-shadow: 0 13px 24px rgba(44, 62, 46, 0.17);
+  padding: 14px 14px 22px;
+  width: 236px;
+  z-index: 2;
+}
+
+.poster-photo-fallback {
+  background:
+    repeating-linear-gradient(0deg, rgba(125, 187, 108, 0.09) 0 1px, transparent 1px 10px),
+    #e7efe0;
+}
+
+.poster-stat-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 148px;
+  padding: 28px 30px;
+}
+
+.poster-stat-card + .poster-stat-card {
+  border-left: 1px solid rgba(125, 187, 108, 0.24);
+}
+
+.poster-stat-card span {
+  color: rgba(44, 62, 46, 0.65);
+  font-size: 19px;
+}
+
+.poster-stat-card strong {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-top: 17px;
+}
+
+.poster-qr {
+  background-color: #fff;
+  background-image:
+    linear-gradient(90deg, #2c3e2e 0 19%, transparent 19% 29%, #2c3e2e 29% 42%, transparent 42% 54%, #2c3e2e 54% 65%, transparent 65%),
+    linear-gradient(#2c3e2e 0 18%, transparent 18% 28%, #2c3e2e 28% 41%, transparent 41% 55%, #2c3e2e 55% 66%, transparent 66%),
+    repeating-linear-gradient(45deg, transparent 0 8px, rgba(125, 187, 108, 0.48) 8px 13px, transparent 13px 22px);
+  background-size: 32px 32px, 32px 32px, 24px 24px;
+  border: 10px solid #fff;
+  box-shadow: 0 5px 15px rgba(44, 62, 46, 0.13);
+  height: 136px;
+  width: 136px;
+}
+
+@keyframes timeline-flow {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 100%;
+  }
+}
+
+.story-paper {
+  background-color: #f8f2e2;
+  background-image:
+    linear-gradient(90deg, transparent 0 42px, rgba(198, 113, 96, 0.26) 42px 43px, transparent 43px),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 34px,
+      rgba(131, 199, 214, 0.42) 35px,
+      transparent 36px
+    ),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.62), rgba(220, 203, 164, 0.18));
+  box-shadow: inset 0 0 28px rgba(121, 95, 58, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .polaroid-card {
+    will-change: auto;
+  }
+
+  .postcard {
+    will-change: auto;
+  }
+
+  .timeline-river {
+    animation: none;
+  }
+}
